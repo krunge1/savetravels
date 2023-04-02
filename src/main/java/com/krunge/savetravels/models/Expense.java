@@ -47,7 +47,7 @@ public class Expense {
 	
 	@NotNull(message="Amount must be greater than zero")
 	@Positive(message="Amount must be greater than zero")
-	private Long amount;
+	private Double amount;
 	
 	@NotNull
 	@Size(min=5, max=200, message="Description must be at least 5 characters long and less than 200")
@@ -74,10 +74,10 @@ public class Expense {
 	public void setVendor(String vendor) {
 		this.vendor = vendor;
 	}
-	public Long getAmount() {
+	public Double getAmount() {
 		return amount;
 	}
-	public void setAmount(Long amount) {
+	public void setAmount(Double amount) {
 		this.amount = amount;
 	}
 	public String getDescription() {

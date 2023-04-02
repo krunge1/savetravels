@@ -19,13 +19,27 @@
 <script src="/webjars/bootstrap/js/bootstrap.min.js"></script>
     </head>
 <body>
-	<h1>Expense Details</h1>
+	<div class="header display_flex">
+	<h1 class="green_text">Expense Details</h1>
 	<a href="/expenses">Go Back</a>
-	<div>
-	<p>Expense Name: <c:out value="${expense.expenseName}"/></p>
-	<p>Expense Description: <c:out value="${expense.description}"/></p>
-	<p>Vendor: <c:out value="${expense.vendor}"/></p>
-	<p>Amount Spent: <c:out value="${expense.amount}"/></p>	
+	</div>
+	<div class="container">
+	<div class="row">
+	<p class="col">Expense Name: </p>
+	<p class="col"><c:out value="${expense.expenseName}"/></p>
+	</div>
+	<div class="row">
+	<p class="col">Expense Description: </p>
+	<p class="col"><c:out value="${expense.description}"/></p>
+	</div>
+	<div class="row">
+	<p class="col">Vendor: </p>
+	<p class="col"><c:out value="${expense.vendor}"/></p>
+	</div>
+	<div class="row">
+	<p class="col">Amount Spent: </p>
+	<p class="col"><fmt:formatNumber value ="${expense.amount}" type="currency"/></p>	
+	</div>
     </div>
 </body>
 </html>

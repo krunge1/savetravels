@@ -19,29 +19,31 @@
 <script src="/webjars/bootstrap/js/bootstrap.min.js"></script>
     </head>
 <body>
-	<h1>Edit Travels</h1>
+	<div class="header display_flex">
+	<h1 class="blue_text">Edit Travels</h1>
 	<a href="/expenses">Go Back</a>
-	<div class="form_box">
+	</div>
+	<div class="form_box container">
     <form:form action="/expenses/${expense.id}" method="post" modelAttribute="expense">
-    	<div class="mb-3">
-    		<form:label path="expenseName" class="form-label">Expense Name:</form:label>
+    	<div class="mb-3 row">
+    		<form:label path="expenseName" class="form-label col">Expense Name:</form:label>
     		<form:errors path="expenseName" class="text-danger"/>
-    		<form:input path="expenseName"/>
+    		<form:input path="expenseName" class="col"/>
     	</div>
-    	<div class="mb-3">
- 	    	<form:label path="vendor" class="form-label">Vendor:</form:label>
+    	<div class="mb-3 row">
+ 	    	<form:label path="vendor" class="form-label col">Vendor:</form:label>
     		<form:errors path="vendor" class="text-danger"/>
-    		<form:input path="vendor"/>
+    		<form:input path="vendor" class="col"/>
        	</div>
-    	<div class="mb-3">
-    		<form:label path="amount" class="form-label">Amount:</form:label>
+    	<div class="mb-3 row">
+    		<form:label path="amount" class="form-label col">Amount:</form:label>
     		<form:errors path="amount" class="text-danger"/>
-    		<form:input type="number" path="amount"/>
+    		<form:input type="number" path="amount" class="col"/>
     	</div>
- 	    <div class="mb-3">
- 	        <form:label path="description" class="form-label">Description:</form:label>
+ 	    <div class="mb-3 row">
+ 	        <form:label path="description" class="form-label col">Description:</form:label>
     		<form:errors path="description" class="text-danger"/>
-    		<form:textarea path="description" rows="3"/>
+    		<form:textarea path="description" rows="3" class="col"/> 
     	</div>    
  	    <button type="submit" class="btn btn-primary" value="submit_form">Update</button>
     </form:form>
